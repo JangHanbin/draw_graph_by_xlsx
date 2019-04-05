@@ -36,6 +36,6 @@ if __name__=='__main__':
 
 
     plt.grid()
-    plt.plot(secs,eachs)
     plt.plot(secs,accumulateds)
+
     plt.show()
