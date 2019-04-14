@@ -36,6 +36,12 @@ if __name__=='__main__':
 
 
     plt.grid()
-    plt.plot(secs,accumulateds)
+    # plt.xlim( )
+    plt.xticks(range(1,11))
+    plt.bar(secs, accumulateds,width=0.2)
+    print(secs)
+    print(accumulateds)
 
+    plt.xlabel('Time')
+    plt.ylabel('Accumulate Propagation')
     plt.show()
