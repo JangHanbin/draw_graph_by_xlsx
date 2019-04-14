@@ -37,11 +37,11 @@ if __name__=='__main__':
 
     plt.grid()
     # plt.xlim( )
-    plt.xticks(range(1,11))
-    plt.bar(secs, accumulateds,width=0.2)
-    print(secs)
-    print(accumulateds)
-
+    # plt.xticks(range(1,11))
+    plt.bar(secs, accumulateds)
+    # print(secs)
+    # print(accumulateds)
+    # print([sec / 2 for sec in secs])
     plt.xlabel('Time')
     plt.ylabel('Accumulate Propagation')
     plt.show()
