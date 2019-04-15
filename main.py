@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from openpyxl import Workbook, load_workbook
-
+from matplotlib.pyplot import figure
+figure(num=None, figsize=(9, 6), dpi=80, facecolor='w', edgecolor='k')
 
 class ExcelReader:
     def __init__(self, file_name):
@@ -36,12 +37,10 @@ if __name__=='__main__':
 
 
     plt.grid()
-    # plt.xlim( )
-    # plt.xticks(range(1,11))
-    plt.bar(secs, accumulateds)
-    # print(secs)
-    # print(accumulateds)
-    # print([sec / 2 for sec in secs])
-    plt.xlabel('Time')
-    plt.ylabel('Accumulate Propagation')
+    plt.xticks(range(-1,11))
+
+    plt.plot(secs,[accumulated /100 for accumulated in accumulateds], c='k')
+    # plt.bar(secs, accumulateds)
+    plt.xlabel('Elapsed time (sec.)',fontsize=20)
+    plt.ylabel('Cumulative distribution function',fontsize=20)
     plt.show()
