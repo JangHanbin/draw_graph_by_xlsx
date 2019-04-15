@@ -37,10 +37,12 @@ if __name__=='__main__':
 
 
     plt.grid()
-    plt.xticks(range(-1,11))
+    plt.xticks(range(-1,11),fontsize=15)
 
-    plt.plot(secs,[accumulated /100 for accumulated in accumulateds], c='k')
+    plt.yticks(fontsize=15)
+
+    plt.plot(secs,[accumulated /100 for accumulated in accumulateds], c='#C80000', linewidth=3.0)
     # plt.bar(secs, accumulateds)
-    plt.xlabel('Elapsed time (sec.)',fontsize=20)
+    plt.xlabel('Elapsed time (seconds)',fontsize=20)
     plt.ylabel('Cumulative distribution function',fontsize=20)
     plt.show()
