@@ -45,4 +45,5 @@ if __name__=='__main__':
     # plt.bar(secs, accumulateds)
     plt.xlabel('Elapsed time (seconds)',fontsize=20)
     plt.ylabel('Cumulative distribution function',fontsize=20)
+    plt.savefig('propagation.eps', format='eps', dpi=1000)
     plt.show()
